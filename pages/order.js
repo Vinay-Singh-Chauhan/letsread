@@ -1,12 +1,12 @@
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import { mongoose } from "mongoose";
 import Order from "@/models/order";
-import { useRouter } from "next/router";
+
 import Error404 from "@/components/Error404";
 
 const MyOrder = ({ order,error }) => {
-  const router=useRouter();
+  // const router=useRouter();
   
   if(error){
     return <Error404/>

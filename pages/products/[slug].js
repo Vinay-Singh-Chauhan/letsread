@@ -3,13 +3,13 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Product from '@/models/product'
 import mongoose from 'mongoose'
-import Link from 'next/link'
 import Error404 from '@/components/Error404'
 const Slug = ({addToCart,product,variants,buyNow,error}) => {
   const [pin, setPin] = useState();
   const [service, setService] = useState()
   const [edition, setEdition] = useState(product.edition);
   const [printType, setPrintType] = useState(product.printType)
+  const router=useRouter()
   if(error){
     return <Error404/>;
   }
@@ -40,7 +40,7 @@ const onChangePrintType=async(e)=>{
     }
 
   }
-  const router=useRouter()
+  
   const {slug}=router.query
 
   return (

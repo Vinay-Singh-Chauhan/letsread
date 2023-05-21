@@ -5,6 +5,7 @@ import React, { useState,useEffect } from 'react'
 const Login = ({setLoggedIn,setKey}) => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const router=useRouter()
   const onChangeInput=(e)=>{
     if(e.target.name==="password"){
       setPassword(e.target.value)
@@ -13,7 +14,7 @@ const Login = ({setLoggedIn,setKey}) => {
       setEmail(e.target.value)
     }
   }
-const router=useRouter()
+
 useEffect(() => {
   if(localStorage.getItem("token")){
     router.push("/")
