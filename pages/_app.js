@@ -5,6 +5,10 @@ import { useEffect, useState } from "react";
 import Checkout from "./checkout";
 import { useRouter } from "next/router";
 export default function App({ Component, pageProps }) {
+  const router=useRouter()
+  const [cart, setCart] = useState({});
+  const [loggedIn, setLoggedIn] = useState();
+  const [subTotal, setSubTotal] = useState(0);
   useEffect(() => {
     
     try {
@@ -23,10 +27,7 @@ export default function App({ Component, pageProps }) {
       localStorage.removeItem("cart");
     }
   }, []);
-  const router=useRouter()
-  const [cart, setCart] = useState({});
-  const [loggedIn, setLoggedIn] = useState();
-  const [subTotal, setSubTotal] = useState(0);
+  
 const [key, setKey] = useState(Math.random());
 const logOut=()=>{
 

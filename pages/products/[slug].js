@@ -6,13 +6,14 @@ import mongoose from 'mongoose'
 import Link from 'next/link'
 import Error404 from '@/components/Error404'
 const Slug = ({addToCart,product,variants,buyNow,error}) => {
-  if(error){
-    return <Error404/>;
-  }
   const [pin, setPin] = useState();
   const [service, setService] = useState()
   const [edition, setEdition] = useState(product.edition);
   const [printType, setPrintType] = useState(product.printType)
+  if(error){
+    return <Error404/>;
+  }
+  
   
 const refresh=(ed,pt)=>{
 
