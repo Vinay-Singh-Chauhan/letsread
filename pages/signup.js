@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 
 const Signup = () => {
+  const router=useRouter()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [phone, setPhone] = useState("");
@@ -36,10 +38,10 @@ const Signup = () => {
     let res=await response.json()
 
     if(res.success){
-
-      localStorage.setItem("token",res.token)
+      router.push("/login")
+      // localStorage.setItem("token",res.token)
     }else{
-
+alert("Some problem occurred")
     }
   
   }

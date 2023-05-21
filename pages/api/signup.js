@@ -12,10 +12,10 @@ const handler=async (req,res)=>{
             email:req.body.email,
         })
         await newUser.save()
-        res.status(200).json({success:"user added successfully"})
+        res.status(200).json({success:true,response:"user added successfully"})
     }
     else{
-        res.status(400).json({error:"Not Allowed"})
+        res.status(400).json({error:false,response:"Not Allowed"})
     }
     
 }
