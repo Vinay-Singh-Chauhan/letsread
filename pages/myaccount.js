@@ -41,6 +41,11 @@ const Myaccount = () => {
     if(res.success){
 
       setEmail(res.response.email)
+
+      setName(res.response.name)
+
+      setPhone(res.response.phone)
+
       return;
       // return {success:true,response:res.response}
     }

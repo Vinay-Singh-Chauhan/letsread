@@ -16,7 +16,7 @@ const MyOrder = ({ order,error }) => {
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="container px-5 py-2 mx-auto text-2xl flex justify-between align-text-bottom items-center">
                   <p className="align-text-bottom">
-                  Order ID #{order_id}</p>
+                  Order ID #{order.order_id}</p>
                   <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                       Print Summary
                     </button>

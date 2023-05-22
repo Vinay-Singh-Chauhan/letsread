@@ -40,7 +40,7 @@ setPincode(res.response.pincode)
 setPhone(res.response.phone)
 setAddress(res.response.address)
 onCheckPin(res.response.pincode)
-if (res.response.name.length && res.response.address.length && res.response.pincode.length ) {
+if (res.response.name && res.response.name.length && res.response.address && res.response.address.length && res.response.pincode && res.response.pincode.length ) {
   setDisabledCheckout(false);
   
 } else {
@@ -71,7 +71,7 @@ setNewPassword("")
       getUser()
       
     }else{
-      router.push("/")
+      router.push("/login")
     }
   }, [])
   
@@ -105,7 +105,7 @@ setNewPassword("")
       setPincode(e.target.value);
       onCheckPin(e.target.value)
     }
-    if (name.length && address.length && pincode.length && email.length) {
+    if (name && name.length && address && address.length && pincode &&  pincode.length && email && email.length) {
       setDisabledCheckout(false);
       
     } else {

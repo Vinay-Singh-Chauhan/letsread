@@ -30,13 +30,14 @@ const Orders = () => {
       fecthOrders();
 
     } else {
-      router.push("/");
+      router.push("/login");
     }
   }, []);
 
   return (
     <div className="container w-full md:w-[80vw] mx-auto flex flex-col">
       <h1 className="text-lg">Orders</h1>
+      {orders.length===0 && <div className="mx-auto text-sm">No orders have been placed yet</div> }
       <div className="flex flex-col">
         {orders.map((k)=>{
 

@@ -40,6 +40,7 @@ useEffect(() => {
       localStorage.setItem("token",res.token)
       setLoggedIn(true);
       setKey(Math.random())
+      router.push("/")
     }else{
 
       alert("login failed")

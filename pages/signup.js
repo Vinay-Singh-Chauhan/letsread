@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 
-const Signup = () => {
+const Signup = ({loggedIn,setLoggedIn}) => {
   const router=useRouter()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -38,8 +38,9 @@ const Signup = () => {
     let res=await response.json()
 
     if(res.success){
-      router.push("/login")
-      // localStorage.setItem("token",res.token)
+      localStorage.setItem("token",res.response)
+      setLoggedIn(true)
+      router.push("/myaccount")
     }else{
 alert("Some problem occurred")
     }

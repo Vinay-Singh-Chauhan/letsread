@@ -33,7 +33,7 @@ const Navbar = ({loggedIn,logOut,removeFromCart,addToCart,clearCart,cart,subTota
       <Link href={"/essays"} className="mr-5 hover:text-gray-900">Essays</Link>
     </nav>
     <div className="flex relative items-center  py-1 px-3 rounded  mt-4 md:mt-0">
-      <div href="" className='text-xl mx-2'>{ drop && <div  onMouseLeave={()=>{setdrop(false)}} className="absolute  z-12 bg-blue-200 top-6 right-0 h-fit w-[10vw] ">
+      <div href="" className='text-xl mx-2'>{ drop && <div  onMouseLeave={()=>{setdrop(false)}} className="absolute  z-12 bg-blue-200 top-6 right-0 h-fit min-w-fit w-[10vw] ">
         <ul>
           {!loggedIn && <Link href="/login"><li className='cursor-pointer hover:bg-violet-500 hover:text-white block py-1 px-1 text-sm'>Login</li></Link>}
           {loggedIn && <Link href="/myaccount"><li className='cursor-pointer hover:bg-violet-500 hover:text-white block py-1 px-1 text-sm'>Account</li></Link>}
